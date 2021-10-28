@@ -12,13 +12,30 @@
     
     <input type="button" value="도움 검색" onclick="alert('없다 낫띵')">
     <input type="text"   onchange="alert('전혀 검색이 되지 않습니다.')">
-    <input type="button" value="night" onclick="
-    document.querySelector('body').style.backgroundColor = 'green';
-    document.querySelector('body').style.color = 'white';">
+    
+    <input this type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value ==='night'){
+        target.style.backgroundColor = 'green';
+        target.style.color = 'white';
+    this.value ='day';
 
-    <input type="button" value="day" onclick="
-    document.querySelector('body').style.backgroundColor = 'white';
-    document.querySelector('body').style.color = 'green';"> 
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+while(i < alist.length){
+    alist[i].style.color = 'powderblue';
+    i = i+1; }
+    } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'green';
+      this.value ='night'; 
+      var alist = document.querySelectorAll('a');
+       var i = 0;
+while(i < alist.length){
+    
+    alist[i].style.color = 'blue';
+    i = i+1; }} ">
+
 
 <h3><p><a href="겨울제철음식.html">봄</a></p></h3> 
 <h3><p><a href="여름제철음식.html">여름</a></p></h3>
@@ -26,6 +43,9 @@
 <h3><p><a href=".html">겨울</a></p></h3>
 
 <h4>클릭시 사이트 연결</h4>
-<h4><p>요리방법영상은 ebs최고의 요리비결에서 많은 정보 참조하세요. </p></h4>
+<h4><p>요리방법영상은 ebs최고의 요리비결에서 많은 정보 참조하세요. *각 이미지 클릭시 영상으로 넘어갑니다. </p></h4>
+
+
+
 </body>
 </html>
